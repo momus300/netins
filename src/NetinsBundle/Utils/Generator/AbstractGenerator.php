@@ -12,6 +12,7 @@ abstract class AbstractGenerator implements GeneratorInterface
      */
     protected function getFilePath(string $selectedFile = ''):string
     {
+        $this->checkDir();
         if (empty($selectedFile)) {
             $fileType = strtolower($this->getFileType());
             $fileName = self::FILES_PATH . $fileType . DIRECTORY_SEPARATOR;
@@ -40,5 +41,14 @@ abstract class AbstractGenerator implements GeneratorInterface
             'Surname' => $user->getSurname(),
             'Age' => $user->getAge()
         ];
+    }
+
+    private function checkDir()
+    {
+        $fileType = strtolower($this->getFileType());
+        $fileName = self::FILES_PATH . $fileType;
+        if (!file_exists($fileName)) {
+            mkdir($fileName, 0777, true);
+        }
     }
 }
