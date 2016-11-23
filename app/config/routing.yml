@@ -1,0 +1,4 @@
+netins:
+    resource: "@NetinsBundle/Resources/config/routing.yml"
+    prefix:   /
+

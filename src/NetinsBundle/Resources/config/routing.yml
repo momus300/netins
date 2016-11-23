@@ -1,0 +1,19 @@
+netins_clear:
+    path:     /clear
+    defaults: {_controller: NetinsBundle:Generator:clear}
+
+netins_gen_csv:
+    path:     /generate-for-csv
+    defaults: {_controller: NetinsBundle:Generator:generateForCsv}
+
+netins_gen_xml:
+    path:     /generate-for-xml
+    defaults: {_controller: NetinsBundle:Generator:generateForXml}
+
+netins_gen_db:
+    path:     /generate-for-db
+    defaults: {_controller: NetinsBundle:Generator:generateForDB}
+
+netins_list_files:
+    path:     /
+    defaults: {_controller: NetinsBundle:Generator:listFiles}

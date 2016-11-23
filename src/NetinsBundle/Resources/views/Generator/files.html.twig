@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="col-md-4">
+        <h4>Pliki XML</h4>
+        <table class="table table-striped">
+            <thead>
+
+            </thead>
+            <tbody>
+            {% for file in files['xml'] %}
+                <tr>
+                    <td>{{ file }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-md-4">
+        <h4>Pliki CSV</h4>
+        <table class="table table-striped">
+            {% for file in files['csv'] %}
+                <tr>
+                    <td>{{ file }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div class="col-md-4">
+        <h4>Baza danych</h4>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                    <tr>
+                        <td>{{ user.number }}</td>
+                        <td>{{ user.name }}</td>
+                        <td>{{ user.surname }}</td>
+                        <td>{{ user.age }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+

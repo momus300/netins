@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="col-xs-3 text-center">
+        <table class="table">
+            {% for file in files['xml'] %}
+                <tr>
+                    <td>{{ file }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div class="col-xs-3 text-center">
+    <table class="table">
+        {% for file in files['csv'] %}
+            <tr>
+                <td>{{ file }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    </div>
+{% endblock %}
+
