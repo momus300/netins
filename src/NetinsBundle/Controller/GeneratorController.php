@@ -15,6 +15,7 @@ class GeneratorController extends Controller
 
     /**
      * Listuje wszystkie pliki i rekordy w bazie danych
+     Moja nowa zmiana ;D
      *
      * @return \Symfony\Component\HttpFoundation\Response
      */
