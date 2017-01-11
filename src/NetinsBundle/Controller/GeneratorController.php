@@ -15,7 +15,7 @@ class GeneratorController extends Controller
 
     /**
      * Listuje wszystkie pliki i rekordy w bazie danych
-     Moja nowa zmiana ;D
+     * Zmiana pod nowy branch
      *
      * @return \Symfony\Component\HttpFoundation\Response
      */
@@ -90,7 +90,7 @@ class GeneratorController extends Controller
     {
         $users = $this->getUsersFromDB();
 
-        $Files = new Generator();
+        $Files = $this->get('files.generator');
         $Files->addGenerator(new XML());
         $Files->addGenerator(new CSV());
         $Files->generate($users);
