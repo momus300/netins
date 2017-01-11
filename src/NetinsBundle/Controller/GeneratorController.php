@@ -15,7 +15,7 @@ class GeneratorController extends Controller
 
     /**
      * Listuje wszystkie pliki i rekordy w bazie danych
-     * Zmiana pod nowy branch - nowa zmiana
+     * Zmiana pod nowy branch - nowa zmiana - nowy test
      *
      * @return \Symfony\Component\HttpFoundation\Response
      */
